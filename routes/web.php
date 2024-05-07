@@ -22,4 +22,7 @@ Route::get('/', function () {
 //     return view('dashboard');
 // });
 
+Route::get('/api/users', [ApplicationController::class, 'index'] );
+Route::get('/api/users', [ApplicationController::class, 'store'] );
+
 Route::get('{view}', ApplicationController::class)->where('view', '(.*)');
